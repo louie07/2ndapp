@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Task To Do</title>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script>
+        $(document).on("mobileinit", function() {
+            $.mobile.toolbar.prototype.options.addBtn = true;
+        });
+    </script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+
+    .save-button{
+        background:#5cb85c;
+        text-shadow: 0 0 0; 
+        color: #ffffff;
+    }
+
+    </style>
+    <title>task to do</title>
+    <style type="text/css">
+body
+{ 
+    background: url(wood3.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+ }
+
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+</style>
+    </head>
+
+
+    <body>
+        <div data-role="page" id="Homepage"> 
+            <div data-role="header" data-position="fixed" data-theme="a">
+                <h1>TASK TO DO </h1>   
+            </div>
+            <div data-role="main" class="ui-content">   
+                <ul id="note_List" data-role="listview" data-inset="false">
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="a">
+                <div data-role="navbar" data-iconpos="top" >
+                    <ul>  
+                        <li>
+                            <a href="#NotePage" class="ui-btn">Create Task</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+        <div data-role="page" id="NotePage">
+
+            <div data-role="header">
+                <h1> TASK Note</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form id="form-Add">
+                   <center> <label for="noteDescription"><h3>Title of The Task<h3></label></center>
+                    <input type="text" id="noteDescription" value=""> 
+
+                    <center><label for="note"><h3>Type Your Task Here<h3></label></center>
+                    <textarea type="text" id="addNote"></textarea>
+                    </form>
+                    <center><button style="color:black;background:#B0C4DE;border-color:#000000;height:30px;width:100px" id="submitNote" class="ui-btn">Save</button></center>
+
+            </div>
+        </div>  
+        <div data-role="page" id="EditNotePage">
+
+            <div data-role="header">
+                <h1>EDIT YOUR TASK</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                
+                    <center><label for="noteDescriptionEdit"><h3>Title of The Task<h3></label></center>
+                    <input type="text" id="noteDescriptionEdit" value=""> 
+
+                    <center><label for="noteEdit"><h3>Type Your Task Here<h3></label><center>
+                    <textarea type="text" id="noteEdit"></textarea>
+
+                    <CENTER><button style="color:black;background:#B0C4DE;border-color:#000000;height:30px;width:100px" id="submitEditNote" class="ui-btn ui-btn-inline">Save</button>
+                    <button style="color:black;background:#B0C4DE;border-color:#000000;height:30px;width:100px"id="deleteNote" class="ui-btn ui-btn-inline">Delete</button></CENTER>
+            </div>
+        </div>  
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
